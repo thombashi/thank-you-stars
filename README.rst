@@ -1,4 +1,4 @@
-.. contents:: **thank-you-stars** inspired by teppeis/thank-you-stars
+.. contents:: **thank-you-stars** inspired by `teppeis/thank-you-stars <https://github.com/teppeis/thank-you-stars>`__
    :backlinks: top
    :depth: 2
 
