@@ -14,6 +14,15 @@ thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies.
 3. Repeat 1. and 2. for each of the dependency packages
 
 
+.. image:: https://badge.fury.io/py/thank-you-stars.svg
+    :target: https://badge.fury.io/py/thank-you-stars
+    :alt: PyPI package version
+
+.. image:: https://img.shields.io/pypi/pyversions/thank-you-stars.svg
+    :target: https://pypi.org/project/thank-you-stars/
+    :alt: Supported Python versions
+
+
 Usage
 ============================================
 
@@ -73,14 +82,62 @@ Check starred status
 .. code-block::
 
     $ thank-you-stars thank-you-stars --check
+    Collect package info: 100%|███████████████████████| 2/2 [00:00<00:00, 196.82it/s]
+    Collect GitHub info: 100%|███████████████████████| 14/14 [00:00<00:00, 29.11it/s]
+    |     Package     |        Repository         | Starred | Owner |
+    |-----------------|---------------------------|:-------:|:-----:|
+    | thank-you-stars | thombashi/thank-you-stars |         |   X   |
+    | DateTimeRange   | thombashi/DateTimeRange   |         |   X   |
+    | PyGithub        | PyGithub/PyGithub         |    X    |       |
+    | colorama        | tartley/colorama          |    X    |       |
+    | logbook         | getlogbook/logbook        |    X    |       |
+    | mbstrdecoder    | thombashi/mbstrdecoder    |         |   X   |
+    | msgfy           | thombashi/msgfy           |         |   X   |
+    | pathvalidate    | thombashi/pathvalidate    |         |   X   |
+    | pytablewriter   | thombashi/pytablewriter   |         |   X   |
+    | requests        | requests/requests         |    X    |       |
+    | setuptools      | pypa/setuptools           |    X    |       |
+    | simplejson      | simplejson/simplejson     |    X    |       |
+    | subprocrunner   | thombashi/subprocrunner   |         |   X   |
+    | tqdm            | tqdm/tqdm                 |    X    |       |
 
 
-
-Increase the repository traversal depth and output verbosity
+Increase the repository traversal depth
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block::
 
-    $ thank-you-stars thank-you-stars --check -vv --depth 4 
+    $ thank-you-stars thank-you-stars --check --depth 3 -v
+    Collect package info: 100%|████████████████████████| 4/4 [00:00<00:00, 185.04it/s]
+    Collect GitHub info: 100%|██████████████████████| 27/27 [00:00<00:00, 1414.71it/s]
+    |     Package     |        Repository         | Starred | Owner | Depth |
+    |-----------------|---------------------------|:-------:|:-----:|------:|
+    | thank-you-stars | thombashi/thank-you-stars |         |   X   |     0 |
+    | DateTimeRange   | thombashi/DateTimeRange   |         |   X   |     1 |
+    | PyGithub        | PyGithub/PyGithub         |    X    |       |     1 |
+    | colorama        | tartley/colorama          |    X    |       |     1 |
+    | logbook         | getlogbook/logbook        |    X    |       |     1 |
+    | mbstrdecoder    | thombashi/mbstrdecoder    |         |   X   |     1 |
+    | msgfy           | thombashi/msgfy           |         |   X   |     1 |
+    | pathvalidate    | thombashi/pathvalidate    |         |   X   |     1 |
+    | pytablewriter   | thombashi/pytablewriter   |         |   X   |     1 |
+    | requests        | requests/requests         |    X    |       |     1 |
+    | setuptools      | pypa/setuptools           |    X    |       |     1 |
+    | simplejson      | simplejson/simplejson     |    X    |       |     1 |
+    | subprocrunner   | thombashi/subprocrunner   |         |   X   |     1 |
+    | tqdm            | tqdm/tqdm                 |    X    |       |     1 |
+    | DataProperty    | thombashi/DataProperty    |         |   X   |     2 |
+    | certifi         | certifi/python-certifi    |         |       |     2 |
+    | chardet         | chardet/chardet           |    X    |       |     2 |
+    | deprecated      | tantale/deprecated        |         |       |     2 |
+    | dominate        | Knio/dominate             |    X    |       |     2 |
+    | idna            | kjd/idna                  |         |       |     2 |
+    | pyjwt           | jpadilla/pyjwt            |         |       |     2 |
+    | python-dateutil | paxan/python-dateutil     |         |       |     2 |
+    | six             | benjaminp/six             |    X    |       |     2 |
+    | tabledata       | thombashi/tabledata       |         |   X   |     2 |
+    | typepy          | thombashi/typepy          |         |   X   |     2 |
+    | urllib3         | urllib3/urllib3           |         |       |     2 |
+    | wrapt           | GrahamDumpleton/wrapt     |         |       |     3 |
 
 
 Command help
