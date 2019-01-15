@@ -52,9 +52,11 @@ setuptools.setup(
 
     author=pkg_info["__author__"],
     author_email=pkg_info["__email__"],
-    description="thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies.",
+    description=(
+        "thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies hosted on GitHub."
+    ),
     include_package_data=True,
-    keywords=["GitHub", "Star"],
+    keywords=["GitHub", "Stars", "PyPI packages"],
     license=pkg_info["__license__"],
     long_description=LONG_DESCRIPTION,
     packages=setuptools.find_packages(exclude=["test*"]),
@@ -88,6 +90,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Topic :: Terminals",
+        "Topic :: Utilities",
     ],
     entry_points={
         "console_scripts": [
