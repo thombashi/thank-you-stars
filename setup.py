@@ -52,7 +52,7 @@ setuptools.setup(
 
     author=pkg_info["__author__"],
     author_email=pkg_info["__email__"],
-    description="DESCRIPTION",
+    description="thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies.",
     include_package_data=True,
     keywords=["GitHub", "Star"],
     license=pkg_info["__license__"],
