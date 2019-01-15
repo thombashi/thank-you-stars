@@ -1,4 +1,4 @@
-.. contents:: **thank-you-stars**
+.. contents:: **thank-you-stars** inspired by teppeis/thank-you-stars
    :backlinks: top
    :depth: 2
 
