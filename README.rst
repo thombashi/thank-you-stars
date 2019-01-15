@@ -5,7 +5,7 @@
 
 Summary
 ============================================
-thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies.
+thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies hosted on GitHub.
 
 `thank-you-stars` will do:
 
