@@ -5,13 +5,7 @@
 
 Summary
 ============================================
-thank-you-stars is a CLI tool to stars to a PyPI package and its dependencies hosted on GitHub.
-
-`thank-you-stars` will do:
-
-1. Find a repository on GitHub correlated with the PyPI package
-2. Star the repository if found
-3. Repeat 1. and 2. for each of the dependency packages
+`thank-you-stars <https://github.com/thombashi/thank-you-stars>`__ is a CLI tool to stars to a PyPI package and its dependencies hosted on GitHub.
 
 
 .. image:: https://badge.fury.io/py/thank-you-stars.svg
@@ -38,10 +32,16 @@ Basic usage
 
     $ thank-you-stars <PyPI package>
 
+``thank-you-stars`` will do:
+
+1. Find a repository on GitHub correlated with the PyPI package
+2. Star the repository if found
+3. Repeat 1. and 2. for each of the dependency packages
+
 
 Initial setup and add stars to GitHub repositories
 --------------------------------------------------------------------------------------
-With ``--setup`` option, you can configure an access token and star to repositories at the same time.
+With ``--setup`` option, you can configure an access token and then star to repositories.
 
 .. code-block::
 
@@ -64,7 +64,7 @@ With ``--setup`` option, you can configure an access token and star to repositor
     [INFO] tys: skip owned repository: thombashi/subprocrunner
     [INFO] tys: star to tqdm/tqdm
 
-``--setup`` option not required for subsequent execution.
+Once setup is completed, ``--setup`` option not required for subsequent executions.
 
 
 Add stars GitHub repositories from a package source
