@@ -15,11 +15,13 @@ clean:
 		$(BUILD_DIR) \
 		$(BUILD_WORK_DIR) \
 		dist/ \
+		pip-wheel-metadata/ \
 		.eggs/ \
 		.pytest_cache/ \
 		.tox/ \
 		**/*/__pycache__/ \
 		*.egg-info/
+	@find . -not -path '*/\.*' -type f | grep -E .+\.py\.[a-z0-9]{32,}\.py$ | xargs -r rm
 
 .PHONY: fmt
 fmt:
