@@ -22,6 +22,15 @@ _star_status_map = {
 }
 
 
+def bool_to_checkmark(value):
+    if value is True:
+        return "X"
+    if value is False:
+        return ""
+
+    return value
+
+
 def pager(text):
     if subprocrunner.Which("less").is_exist():
         pydoc.pipepager(text, cmd="less --chop-long-lines --CLEAR-SCREEN")
@@ -45,17 +54,17 @@ def print_starred_info(starred_info_set, repo_depth_map, verbosity):
         records.append(record)
 
     writer = MarkdownTableWriter()
-    writer.header_list = ["Package", "Repository", "Starred", "Owner"]
+    writer.headers = ["Package", "Repository", "Starred", "Owner"]
     if verbosity is not None:
         if verbosity >= 1:
-            writer.header_list += ["Depth"]
+            writer.headers += ["Depth"]
 
         if verbosity >= 2:
-            writer.header_list += ["URL"]
+            writer.headers += ["URL"]
 
     writer.value_matrix = sorted(records, key=itemgetter(4, 0))  # sorted by depth
     writer.margin = 1
-    writer.value_map = {True: "X", False: ""}
+    writer.register_trans_func(bool_to_checkmark)
     writer.set_style("Starred", Style(align="center"))
     writer.set_style("Owner", Style(align="center"))
     pager(writer.dumps())
