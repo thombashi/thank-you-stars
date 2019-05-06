@@ -204,7 +204,7 @@ Installation
 
 Dependencies
 ============================================
-Python 2.7+ or 3.4+
+Python 2.7+ or 3.5+
 
 - `appconfigpy <https://github.com/thombashi/appconfigpy>`__
 - `colorama <https://github.com/tartley/colorama>`__
@@ -215,7 +215,7 @@ Python 2.7+ or 3.4+
 - `pathvalidate <https://github.com/thombashi/pathvalidate>`__
 - `PyGithub <https://pygithub.readthedocs.io/en/latest/>`__
 - `pytablewriter <https://github.com/thombashi/pytablewriter>`__
-- `requests <http://python-requests.org/>`__
+- `retryrequests <https://github.com/thombashi/retryrequests>`__
 - `simplejson <https://github.com/simplejson/simplejson>`__
 - `subprocrunner <https://github.com/thombashi/subprocrunner>`__
 - `tqdm <https://github.com/tqdm/tqdm>`__
