@@ -7,7 +7,7 @@ from collections import namedtuple
 from difflib import SequenceMatcher
 
 import msgfy
-import requests
+import retryrequests
 import simplejson as json
 from github.GithubException import RateLimitExceededException, UnknownObjectException
 from mbstrdecoder import MultiByteStrDecoder
@@ -178,10 +178,7 @@ class GithubStarredInfoExtractor(object):
             if cache_data:
                 return cache_data
 
-        s = requests.Session()
-        s.mount("https://", requests.adapters.HTTPAdapter(max_retries=5))
-
-        r = s.get("https://pypi.org/pypi/{}/json".format(pypi_pkg_name))
+        r = retryrequests.get("https://pypi.org/pypi/{}/json".format(pypi_pkg_name))
         if r.status_code != 200:
             return None
 
