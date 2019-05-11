@@ -5,7 +5,7 @@ BUILD_DIR := build
 .PHONY: build
 build:
 	@make clean
-	@python setup.py build
+	@python setup.py sdist bdist_wheel
 	@twine check dist/*
 	@rm -rf $(BUILD_DIR)/
 	ls -lh dist/*
