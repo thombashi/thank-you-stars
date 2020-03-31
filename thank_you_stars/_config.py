@@ -9,7 +9,7 @@ from ._const import Default
 
 app_config_mgr = ConfigManager(
     config_name=Default.CONFIG_FILENAME,
-    config_item_list=[
+    config_items=[
         ConfigItem(
             name="token",
             initial_value=None,
