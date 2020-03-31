@@ -1,6 +1,6 @@
 appconfigpy>=1.0.1,<2
 colorama>=0.3.7,<1.0.0
-DateTimeRange>=0.6.1,<1.0.0
+DateTimeRange>=1.0.0,<2
 enum34;python_version<"3.4"
 Logbook>=0.12.3,<2.0.0
 mbstrdecoder[all]>=0.8.0,<1.0.0
