@@ -1,8 +1,7 @@
-from textwrap import dedent
-
 from github import Github
 
 from ._config import app_config_mgr
+from ._logger import logger
 
 
 def extract_github_api_token(options):
@@ -14,28 +13,20 @@ def extract_github_api_token(options):
     try:
         configs = app_config_mgr.load()
     except ValueError:
-        raise RuntimeError(
-            dedent(
-                """\
-                GitHub personal access token not found in the config file {:s}. {:s}
-                """.format(
-                    app_config_mgr.config_filepath, token_error_msg
-                )
+        logger.debug(
+            "GitHub personal access token not found in the config file {:s}. {:s}".format(
+                app_config_mgr.config_filepath, token_error_msg
             )
         )
 
-    if not configs:
-        raise RuntimeError(
-            dedent(
-                """\
-                config file {:s} not found. {:s}
-                """.format(
-                    app_config_mgr.config_filepath, token_error_msg
-                )
-            )
-        )
+    if configs and configs.get("token"):
+        return configs["token"].strip()
 
-    return configs["token"].strip()
+    logger.debug(
+        "config file {:s} not found. {:s}".format(app_config_mgr.config_filepath, token_error_msg)
+    )
+
+    return None
 
 
 def create_github_client(options):
