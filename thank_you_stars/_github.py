@@ -26,7 +26,11 @@ def extract_github_api_token(options):
         "config file {:s} not found. {:s}".format(app_config_mgr.config_filepath, token_error_msg)
     )
 
-    return None
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        logger.debug("GITHUB_TOKEN not defined")
+
+    return token
 
 
 def create_github_client(options):
