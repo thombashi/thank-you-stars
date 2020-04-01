@@ -1,7 +1,3 @@
-# encoding: utf-8
-
-from __future__ import absolute_import, division, unicode_literals
-
 import enum
 from datetime import datetime
 from functools import total_ordering
@@ -40,7 +36,7 @@ class CacheType(enum.Enum):
 
 
 @total_ordering
-class CacheTime(object):
+class CacheTime:
     @property
     def seconds(self):
         return self.__second
@@ -65,7 +61,7 @@ class CacheTime(object):
         return self.seconds < other.seconds
 
 
-class CacheManager(object):
+class CacheManager:
     def __init__(self, user_name, cache_type, cache_lifetime):
         self.__base_dir = (
             Path(

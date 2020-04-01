@@ -1,7 +1,3 @@
-# encoding: utf-8
-
-from __future__ import absolute_import, unicode_literals
-
 import re
 import sys
 
@@ -10,7 +6,7 @@ from subprocrunner import CalledProcessError, SubprocessRunner
 from ._logger import logger
 
 
-class PipShow(object):
+class PipShow:
     _AUTHOR_REGEXP = re.compile("^Author: (?P<author>.+)", re.MULTILINE)
 
     cache_mgr = None

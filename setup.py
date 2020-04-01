@@ -1,10 +1,4 @@
-# encoding: utf-8
-
-from __future__ import unicode_literals
-
-import io
 import os.path
-import sys
 
 import setuptools
 
@@ -29,7 +23,7 @@ def get_release_command_class():
 with open(os.path.join(MODULE_NAME.replace("-", "_"), "__version__.py")) as f:
     exec(f.read(), pkg_info)
 
-with io.open("README.rst", encoding=ENCODING) as f:
+with open("README.rst", encoding=ENCODING) as f:
     LONG_DESCRIPTION = f.read()
 
 with open(os.path.join(REQUIREMENT_DIR, "requirements.txt")) as f:
@@ -70,8 +64,6 @@ setuptools.setup(
         "Intended Audience :: Information Technology",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",

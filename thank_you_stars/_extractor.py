@@ -1,7 +1,3 @@
-# encoding: utf-8
-
-from __future__ import absolute_import, unicode_literals
-
 import re
 from collections import namedtuple
 from difflib import SequenceMatcher
@@ -47,7 +43,7 @@ class GitHubStarredInfo(
             raise ValueError("invalid value: {}".format(self.star_status))
 
 
-class GithubStarredInfoExtractor(object):
+class GithubStarredInfoExtractor:
     _MATCH_THRESHOLD = 0.6
 
     @property

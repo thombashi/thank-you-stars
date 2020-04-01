@@ -1,10 +1,6 @@
-# encoding: utf-8
-
 """
 .. codeauthor:: Tsuyoshi Hombashi <tsuyoshi.hombashi@gmail.com>
 """
-
-from __future__ import print_function, unicode_literals
 
 import errno
 
@@ -18,7 +14,7 @@ DEPTH_OPT = "--depth"
 DRY_RUN_OPT = "--dry-run"
 
 
-class Test_tys(object):
+class Test_tys:
     @pytest.mark.parametrize(
         ["command", "expected"],
         [

@@ -1,7 +1,3 @@
-# encoding: utf-8
-
-from __future__ import absolute_import, unicode_literals
-
 from ._common import get_github_repo_id
 from ._logger import logger
 
