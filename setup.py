@@ -44,7 +44,6 @@ setuptools.setup(
     name=MODULE_NAME,
     version=pkg_info["__version__"],
     url=REPOSITORY_URL,
-
     author=pkg_info["__author__"],
     author_email=pkg_info["__email__"],
     description=(
@@ -55,11 +54,7 @@ setuptools.setup(
     license=pkg_info["__license__"],
     long_description=LONG_DESCRIPTION,
     packages=setuptools.find_packages(exclude=["test*"]),
-    project_urls={
-        "Source": REPOSITORY_URL,
-        "Tracker": "{:s}/issues".format(REPOSITORY_URL),
-    },
-
+    project_urls={"Source": REPOSITORY_URL, "Tracker": "{:s}/issues".format(REPOSITORY_URL)},
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
     install_requires=SETUPTOOLS_REQUIRES + INSTALL_REQUIRES,
     tests_require=TESTS_REQUIRES,
@@ -68,7 +63,6 @@ setuptools.setup(
         "release": ["releasecmd>=0.0.18,<0.1.0"],
         "test": TESTS_REQUIRES,
     },
-
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
@@ -86,9 +80,6 @@ setuptools.setup(
         "Topic :: Terminals",
         "Topic :: Utilities",
     ],
-    entry_points={
-        "console_scripts": [
-            "thank-you-stars=thank_you_stars.main:main",
-        ],
-    },
-    cmdclass=get_release_command_class())
+    entry_points={"console_scripts": ["thank-you-stars=thank_you_stars.main:main",],},
+    cmdclass=get_release_command_class(),
+)
