@@ -29,4 +29,5 @@ class Test_tys(object):
         ],
     )
     def test_normal(self, command, expected):
-        assert SubprocessRunner(command).run() == expected
+        runner = SubprocessRunner(command)
+        assert runner.run() == expected, runner.stderr
