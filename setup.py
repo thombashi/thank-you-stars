@@ -72,6 +72,6 @@ setuptools.setup(
         "Topic :: Terminals",
         "Topic :: Utilities",
     ],
-    entry_points={"console_scripts": ["thank-you-stars=thank_you_stars.main:main",],},
+    entry_points={"console_scripts": ["thank-you-stars=thank_you_stars.__main__:main"]},
     cmdclass=get_release_command_class(),
 )
