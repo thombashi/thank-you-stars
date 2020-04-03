@@ -163,7 +163,7 @@ def extract_package_name(options):
         return options.target
 
     if os.path.isfile("setup.py"):
-        runner = SubprocessRunner(["python", "setup.py", "--name"])
+        runner = SubprocessRunner([sys.executable, "setup.py", "--name"])
         if runner.run() == 0:
             return runner.stdout.strip().lower()
 
