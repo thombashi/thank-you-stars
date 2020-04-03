@@ -1,4 +1,5 @@
 import re
+import sys
 from collections import namedtuple
 from difflib import SequenceMatcher
 
@@ -162,7 +163,7 @@ class GithubStarredInfoExtractor:
 
     @staticmethod
     def __normalize_pkg_name(name):
-        return re.sub("python", "", name, flags=re.IGNORECASE).lower()
+        return re.sub(sys.executable, "", name, flags=re.IGNORECASE).lower()
 
     def __fetch_pypi_info(self, pypi_pkg_name):
         cache_filepath = self.__pypi_cache_mgr.get_pkg_cache_filepath(pypi_pkg_name, "pypi_desc")
