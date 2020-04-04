@@ -3,12 +3,13 @@
 """
 
 import errno
+import sys
 
 import pytest
 from subprocrunner import SubprocessRunner
 
 
-TYS_CMD = ["python", "-m", "thank_you_stars"]
+TYS_CMD = [sys.executable, "-m", "thank_you_stars"]
 CHK_OPT = "--check"
 DEPTH_OPT = "--depth"
 DRY_RUN_OPT = "--dry-run"
