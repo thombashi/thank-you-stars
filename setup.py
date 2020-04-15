@@ -52,11 +52,7 @@ setuptools.setup(
     python_requires=">=3.5",
     install_requires=SETUPTOOLS_REQUIRES + INSTALL_REQUIRES,
     tests_require=TESTS_REQUIRES,
-    extras_require={
-        "build": ["twine", "wheel"],
-        "release": ["releasecmd>=0.0.18,<0.1.0"],
-        "test": TESTS_REQUIRES,
-    },
+    extras_require={"test": TESTS_REQUIRES},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
