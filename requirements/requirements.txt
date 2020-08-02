@@ -9,6 +9,5 @@ pathvalidate<3
 PyGithub>=1.43.7,<2
 pytablewriter>=0.50.0,<1
 retryrequests>=0.0.2,<1
-simplejson>=3.8.1,<4
 subprocrunner>=1.2.1,<2
 tqdm>=4.31.1,<5

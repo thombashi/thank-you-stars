@@ -1,9 +1,9 @@
 import enum
+import json
 from datetime import datetime
 from functools import total_ordering
 
 import msgfy
-import simplejson as json
 from datetimerange import DateTimeRange
 from path import Path
 from pathvalidate import sanitize_filename, sanitize_filepath

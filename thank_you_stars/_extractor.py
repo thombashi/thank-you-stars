@@ -1,3 +1,4 @@
+import json
 import re
 import sys
 from collections import namedtuple
@@ -5,7 +6,6 @@ from difflib import SequenceMatcher
 
 import msgfy
 import retryrequests
-import simplejson as json
 from github.GithubException import RateLimitExceededException, UnknownObjectException
 from mbstrdecoder import MultiByteStrDecoder
 from pathvalidate import sanitize_filename
