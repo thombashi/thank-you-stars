@@ -60,7 +60,6 @@ With ``--setup`` option, you can configure an access token and then star to repo
     [INFO] tys: skip owned repository: thombashi/pytablewriter
     [INFO] tys: star to requests/requests
     [INFO] tys: star to pypa/setuptools
-    [INFO] tys: star to simplejson/simplejson
     [INFO] tys: skip owned repository: thombashi/subprocrunner
     [INFO] tys: star to tqdm/tqdm
 
@@ -87,17 +86,18 @@ Check starred status
     |     Package     |        Repository         | Starred | Owner |
     |-----------------|---------------------------|:-------:|:-----:|
     | thank-you-stars | thombashi/thank-you-stars |         |   X   |
-    | DateTimeRange   | thombashi/DateTimeRange   |         |   X   |
-    | PyGithub        | PyGithub/PyGithub         |    X    |       |
+    | appconfigpy     | thombashi/appconfigpy     |         |   X   |
     | colorama        | tartley/colorama          |    X    |       |
+    | datetimerange   | thombashi/DateTimeRange   |         |   X   |
     | logbook         | getlogbook/logbook        |    X    |       |
     | mbstrdecoder    | thombashi/mbstrdecoder    |         |   X   |
     | msgfy           | thombashi/msgfy           |         |   X   |
+    | path.py         | jaraco/path               |    X    |       |
     | pathvalidate    | thombashi/pathvalidate    |         |   X   |
+    | pygithub        | PyGithub/PyGithub         |    X    |       |
     | pytablewriter   | thombashi/pytablewriter   |         |   X   |
-    | requests        | requests/requests         |    X    |       |
+    | retryrequests   | thombashi/retryrequests   |         |   X   |
     | setuptools      | pypa/setuptools           |    X    |       |
-    | simplejson      | simplejson/simplejson     |    X    |       |
     | subprocrunner   | thombashi/subprocrunner   |         |   X   |
     | tqdm            | tqdm/tqdm                 |    X    |       |
 
@@ -112,33 +112,35 @@ Increase the repository traversal depth
     |     Package     |        Repository         | Starred | Owner | Depth |
     |-----------------|---------------------------|:-------:|:-----:|------:|
     | thank-you-stars | thombashi/thank-you-stars |         |   X   |     0 |
-    | DateTimeRange   | thombashi/DateTimeRange   |         |   X   |     1 |
-    | PyGithub        | PyGithub/PyGithub         |    X    |       |     1 |
+    | appconfigpy     | thombashi/appconfigpy     |         |   X   |     1 |
     | colorama        | tartley/colorama          |    X    |       |     1 |
+    | datetimerange   | thombashi/DateTimeRange   |         |   X   |     1 |
     | logbook         | getlogbook/logbook        |    X    |       |     1 |
     | mbstrdecoder    | thombashi/mbstrdecoder    |         |   X   |     1 |
     | msgfy           | thombashi/msgfy           |         |   X   |     1 |
+    | path.py         | jaraco/path               |    X    |       |     1 |
     | pathvalidate    | thombashi/pathvalidate    |         |   X   |     1 |
+    | pygithub        | PyGithub/PyGithub         |    X    |       |     1 |
     | pytablewriter   | thombashi/pytablewriter   |         |   X   |     1 |
-    | requests        | requests/requests         |    X    |       |     1 |
+    | retryrequests   | thombashi/retryrequests   |         |   X   |     1 |
     | setuptools      | pypa/setuptools           |    X    |       |     1 |
-    | simplejson      | simplejson/simplejson     |    X    |       |     1 |
     | subprocrunner   | thombashi/subprocrunner   |         |   X   |     1 |
     | tqdm            | tqdm/tqdm                 |    X    |       |     1 |
-    | DataProperty    | thombashi/DataProperty    |         |   X   |     2 |
-    | certifi         | certifi/python-certifi    |         |       |     2 |
     | chardet         | chardet/chardet           |    X    |       |     2 |
+    | dataproperty    | thombashi/DataProperty    |         |   X   |     2 |
     | deprecated      | tantale/deprecated        |         |       |     2 |
-    | dominate        | Knio/dominate             |    X    |       |     2 |
-    | idna            | kjd/idna                  |         |       |     2 |
+    | path            | jaraco/path               |    X    |       |     2 |
     | pyjwt           | jpadilla/pyjwt            |         |       |     2 |
     | python-dateutil | paxan/python-dateutil     |         |       |     2 |
-    | six             | benjaminp/six             |    X    |       |     2 |
+    | requests        | psf/requests              |    X    |       |     2 |
     | tabledata       | thombashi/tabledata       |         |   X   |     2 |
+    | tcolorpy        | thombashi/tcolorpy        |         |   X   |     2 |
     | typepy          | thombashi/typepy          |         |   X   |     2 |
-    | urllib3         | urllib3/urllib3           |         |       |     2 |
+    | certifi         | certifi/python-certifi    |         |       |     3 |
+    | idna            | kjd/idna                  |         |       |     3 |
+    | six             | benjaminp/six             |    X    |       |     3 |
+    | urllib3         | urllib3/urllib3           |         |       |     3 |
     | wrapt           | GrahamDumpleton/wrapt     |         |       |     3 |
-
 
 Command help
 --------------------------------------------
@@ -204,18 +206,5 @@ Installation
 
 Dependencies
 ============================================
-Python 3.5+
-
-- `appconfigpy <https://github.com/thombashi/appconfigpy>`__
-- `colorama <https://github.com/tartley/colorama>`__
-- `DateTimeRange <https://github.com/thombashi/DateTimeRange>`__
-- `Logbook <https://logbook.readthedocs.io/en/stable/>`__
-- `mbstrdecoder <https://github.com/thombashi/mbstrdecoder>`__
-- `msgfy <https://github.com/thombashi/msgfy>`__
-- `pathvalidate <https://github.com/thombashi/pathvalidate>`__
-- `PyGithub <https://pygithub.readthedocs.io/en/latest/>`__
-- `pytablewriter <https://github.com/thombashi/pytablewriter>`__
-- `retryrequests <https://github.com/thombashi/retryrequests>`__
-- `simplejson <https://github.com/simplejson/simplejson>`__
-- `subprocrunner <https://github.com/thombashi/subprocrunner>`__
-- `tqdm <https://github.com/tqdm/tqdm>`__
+- Python 3.5+
+- `Python package dependencies (automatically installed) <https://github.com/thombashi/thank-you-stars/network/dependencies>`__
