@@ -34,14 +34,14 @@ Basic usage
 
 ``thank-you-stars`` will do:
 
-1. Find a repository on GitHub correlated with the PyPI package
-2. Star the repository if found
-3. Repeat 1. and 2. for each of the dependency packages
+1. Find a repository on GitHub correlated with the specified PyPI package
+2. If a repository found, star to the repository
+3. Repeat 1. and 2. for each of the dependency packages of the PyPI package
 
 
 Initial setup and add stars to GitHub repositories
 --------------------------------------------------------------------------------------
-With ``--setup`` option, you can configure an access token and then star to repositories.
+Execute with ``--setup`` option, you can configure a GitHub access token and then star to repositories.
 
 .. code-block::
 
